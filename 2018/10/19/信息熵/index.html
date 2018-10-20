@@ -7,17 +7,17 @@
   
   <title>信息熵 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。">
+  <meta name="description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息熵">
 <meta property="og:url" content="http://yoursite.com/2018/10/19/信息熵/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。">
+<meta property="og:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-20T03:32:47.134Z">
+<meta property="og:updated_time" content="2018-10-20T03:42:04.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵">
-<meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。">
+<meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,13 +86,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。</p>
-<h1 id="熵在物理学中的应用"><a href="#熵在物理学中的应用" class="headerlink" title="熵在物理学中的应用"></a>熵在物理学中的应用</h1><p>熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。</p>
+<h2 id="熵在物理学中的应用"><a href="#熵在物理学中的应用" class="headerlink" title="熵在物理学中的应用"></a>熵在物理学中的应用</h2><p>熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。</p>
+<h2 id="自信息量"><a href="#自信息量" class="headerlink" title="自信息量"></a>自信息量</h2><p>自信息是熵的基础，它表示某一事件<strong>发生时</strong>所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该事件发生时，它的自信息就很少，因为每个人都知道该时间一定会发生。而中国足球国家队在下一届世界杯夺冠，该事件发生时，信息量则很大，该时间发生时，可能包涵着中国国家队翻天覆地的变化。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjngw1d7m00015jkuyofjxobc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjngwdcv40001ghkube7t51jk" class="article-share-link">Share</a>
       
       
     </footer>
