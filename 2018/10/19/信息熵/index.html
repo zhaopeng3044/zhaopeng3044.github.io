@@ -16,7 +16,8 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large h%28x%29=-log_{2}p%28x%29">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-5366c37ae1f87ca30e0d58a3bd76e4f5_hd.jpg">
-<meta property="og:updated_time" content="2018-10-21T03:20:58.200Z">
+<meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29">
+<meta property="og:updated_time" content="2018-10-21T04:18:29.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵">
 <meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
@@ -97,11 +98,16 @@
 <li>自信息跟概率有关系：当某一事件是极不可能出现时（发生的概率很小），当它确实发生时，会给我们带来巨大的信息量；当某一事件一定发生时，它发生时，给我们带来的信息量为零。因此信息量应该依赖于概率分布<em>P</em>(X),所以说自信息量<em>h(x)</em>定义为概率<em>p(x)</em>单调函数。</li>
 <li>自信息量之间是可以叠加的：假设两个事件<em>x</em>和<em>y</em>是相互独立的，那个两个事件同时发生的概率为 <em>p(x,y)</em>=<em>p(x)</em> <em> </em>p(y)<em>，那么分别观测这两个变量得到的信息量和同时观测到这两个变量的信息量是相同的，即： </em>h(x,y)=h(x)+h(y)<em>, 所以此处可以得出自信息量的定义 </em>h(x)<em> 应该是概率 </em>p(x)<em>的</em>log* 函数，同时保证自信息量非负。则自信息量的定义为：<img src="http://chart.googleapis.com/chart?cht=tx&amp;chl=\Large h%28x%29=-log_{2}p%28x%29" alt="imgage"> <img src="https://pic2.zhimg.com/80/v2-5366c37ae1f87ca30e0d58a3bd76e4f5_hd.jpg" alt="image"></li>
 </ul>
+<h2 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h2><p>前面提到的自信息是某一事件发生时，所带来的信息量的大小。在信息论中，熵是接受每条消息中包含信息的×<strong>平均量</strong>,又被称为信息熵，平均信息量。这里的消息代表来自分布或数据流中的事件，样本或特征。熵可以理解为不确定性的度量。熵的大小跟事件不确定性有关，不确定性的变化跟如下两个方面有关：</p>
+<ul>
+<li>事件可能结果的数量有关：当可能结果数量比较大时，我们得到新信息才有潜力拥有大信息量。</li>
+<li>跟概率有关：单看事件可能发生的不同结果数量是不够的，还要看事件不同结果的概率分布。比如2018-19赛季，NBA西部冠军的结果有15种可能，但是有95%的概率是勇士获得西部决赛的冠军。因此该事件所具有的信息熵也比较小。<br><strong>熵的大小可能跟结果的数量有关</strong>: 用熵来评价整个随机变量 <em>x</em>的平均信息量，而平均信息量最好的量度就是随机变量的期望，就是随机变量<em>x</em>的所有取值对应的自信息量的平均值，所以最终熵的定义如下：<br><img src="http://chart.googleapis.com/chart?cht=tx&amp;chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29" alt="image"></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnib2o340001ydkub51suqyd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnid3xze0001kwkus56y4gih" class="article-share-link">Share</a>
       
       
     </footer>
