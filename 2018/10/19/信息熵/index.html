@@ -14,10 +14,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-21T02:23:35.813Z">
+<meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large log_{2}">
+<meta property="og:updated_time" content="2018-10-21T02:43:00.850Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵">
 <meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
+<meta name="twitter:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large log_{2}">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -92,13 +94,13 @@
 <ul>
 <li>自信息量是一个非负数：一个时间的发生要么能给我们带来正的信息量（增加我们的信息）；要么没有给我们带来任何信息，信息量为零；但绝不会从我们这偷走信息。所以自信息是非负数。</li>
 <li>自信息跟概率有关系：当某一事件是极不可能出现时（发生的概率很小），当它确实发生时，会给我们带来巨大的信息量；当某一事件一定发生时，它发生时，给我们带来的信息量为零。因此信息量应该依赖于概率分布<em>P</em>(X),所以说自信息量<em>h(x)</em>定义为概率<em>p(x)</em>单调函数。</li>
-<li>自信息量之间是可以叠加的：假设两个事件<em>x</em>和<em>y</em>是相互独立的，那个两个事件同时发生的概率为 <em>p(x,y)</em>=<em>p(x)</em> <em> </em>p(y)<em>，那么分别观测这两个变量得到的信息量和同时观测到这两个变量的信息量是相同的，即： </em>h(x,y)=h(x)+h(y)<em>, 所以此处可以得出自信息量的定义 </em>h(x)<em> 应该是概率 </em>p(x)<em>的 </em>log* 函数，同时保证自信息量非负。则子信息量的定义为：<br><strong>h(x) = -logp(x)</strong></li>
+<li>自信息量之间是可以叠加的：假设两个事件<em>x</em>和<em>y</em>是相互独立的，那个两个事件同时发生的概率为 <em>p(x,y)</em>=<em>p(x)</em> <em> </em>p(y)<em>，那么分别观测这两个变量得到的信息量和同时观测到这两个变量的信息量是相同的，即： </em>h(x,y)=h(x)+h(y)<em>, 所以此处可以得出自信息量的定义 </em>h(x)<em> 应该是概率 </em>p(x)*的 <img src="http://chart.googleapis.com/chart?cht=tx&amp;chl=\Large log_{2}" alt="image"> 函数，同时保证自信息量非负。则子信息量的定义为：<br><strong>h(x) = -logp(x)</strong></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjni91p0o0001alkuaha0til1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjni9p7g10001z1kud9hsw8sq" class="article-share-link">Share</a>
       
       
     </footer>
