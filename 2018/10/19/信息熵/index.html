@@ -8,6 +8,7 @@
   <title>信息熵 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
+<meta name="keywords" content="Latex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="信息熵">
 <meta property="og:url" content="http://yoursite.com/2018/10/19/信息熵/index.html">
@@ -17,7 +18,7 @@
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large h%28x%29=-log_{2}p%28x%29">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-5366c37ae1f87ca30e0d58a3bd76e4f5_hd.jpg">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29">
-<meta property="og:updated_time" content="2018-10-23T23:42:51.706Z">
+<meta property="og:updated_time" content="2018-10-23T23:53:33.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵">
 <meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
@@ -103,6 +104,7 @@
 <li>事件可能结果的数量有关：当可能结果数量比较大时，我们得到新信息才有潜力拥有大信息量。</li>
 <li>跟概率有关：单看事件可能发生的不同结果数量是不够的，还要看事件不同结果的概率分布。比如2018-19赛季，NBA西部冠军的结果有15种可能，但是有95%的概率是勇士获得西部决赛的冠军。因此该事件所具有的信息熵也比较小。<br><strong>熵的大小可能跟结果的数量有关</strong>: 用熵来评价整个随机变量 <em>x</em>的平均信息量，而平均信息量最好的量度就是随机变量的期望，就是随机变量<em>x</em>的所有取值对应的自信息量的平均值，所以最终熵的定义如下：<br><img src="http://chart.googleapis.com/chart?cht=tx&amp;chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29" alt="image"><br><em>log</em>函数的基可以是任意的，在计算机领域计算熵基本以2为底，因此信息熵的单位是bits;而在机器学习中，基数常选择自然数e，因此单位被称为nats。<strong>熵是有单位的</strong>x.<h3 id="信息熵在编码当中的应用"><a href="#信息熵在编码当中的应用" class="headerlink" title="信息熵在编码当中的应用"></a>信息熵在编码当中的应用</h3></li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -129,25 +131,17 @@
 </tr>
 </tbody>
 </table>
-<p>H(x) = -(1/2<em>log(1/2)+1/4</em>log(1/4)+1/8<em>log(1/8)+1/8</em>log(1/8))<br>
-
-</p><p>
-$$f'(x\_0)=\lim_{\Delta x\to 0} \frac{f(x\_0+\Delta x) - f(x\_0)}{\Delta x}$$
-</p>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
-</script>
-<p></p>
-
+</div>
+<p>H(x) = -(1/2<em>log(1/2)+1/4</em>log(1/4)+1/8<em>log(1/8)+1/8</em>log(1/8))</p>
+<script type="math/tex; mode=display">f'(x\_0)=\lim_{\Delta x\to 0} \frac{f(x\_0+\Delta x) - f(x\_0)}{\Delta x}</script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnmdlg4n00004akulb3pb3yj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnmdyrlg000115kun4116hif" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Latex/">Latex</a></li></ul>
+
     </footer>
   </div>
   
@@ -174,9 +168,23 @@ $$f'(x\_0)=\lim_{\Delta x\to 0} \frac{f(x\_0+\Delta x) - f(x\_0)}{\Delta x}$$
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Latex/">Latex</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Latex/" style="font-size: 10px;">Latex</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -240,23 +248,6 @@ $$f'(x\_0)=\lim_{\Delta x\to 0} \frac{f(x\_0+\Delta x) - f(x\_0)}{\Delta x}$$
 
 
 
-  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
