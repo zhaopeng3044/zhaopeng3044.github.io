@@ -5,22 +5,22 @@
   
 
   
-  <title>信息熵 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
+  <meta name="description" content="title: 信息熵date: 2018-10-19 22:51:00 tags:前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="信息熵">
-<meta property="og:url" content="http://yoursite.com/2018/10/19/信息熵/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/10/23/信息熵/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
+<meta property="og:description" content="title: 信息熵date: 2018-10-19 22:51:00 tags:前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large h%28x%29=-log_{2}p%28x%29">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-5366c37ae1f87ca30e0d58a3bd76e4f5_hd.jpg">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29">
-<meta property="og:updated_time" content="2018-10-23T14:15:23.965Z">
+<meta property="og:updated_time" content="2018-10-23T14:39:35.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="信息熵">
-<meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title: 信息熵date: 2018-10-19 22:51:00 tags:前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时">
 <meta name="twitter:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large h%28x%29=-log_{2}p%28x%29">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -70,27 +70,18 @@
       <div class="outer">
         <section id="main"><article id="post-信息熵" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/10/19/信息熵/" class="article-date">
-  <time datetime="2018-10-20T02:51:00.000Z" itemprop="datePublished">2018-10-19</time>
+    <a href="/2018/10/23/信息熵/" class="article-date">
+  <time datetime="2018-10-23T14:39:35.916Z" itemprop="datePublished">2018-10-23</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      信息熵
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。</p>
+        <p>title: 信息熵<br>date: 2018-10-19 22:51:00</p>
+<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。</p>
 <h2 id="熵在物理学中的应用"><a href="#熵在物理学中的应用" class="headerlink" title="熵在物理学中的应用"></a>熵在物理学中的应用</h2><p>熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。</p>
 <h2 id="自信息量"><a href="#自信息量" class="headerlink" title="自信息量"></a>自信息量</h2><p>自信息是熵的基础，它表示某一事件<strong>发生时</strong>所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该事件发生时，它的自信息就很少，因为每个人都知道该时间一定会发生。而中国足球国家队在下一届世界杯夺冠，该事件发生时，信息量则很大，该时间发生时，可能包涵着中国国家队翻天覆地的变化。<br>那如何度量熵呢？我们需要找到一个函数，来量化熵的值，它需要满足一下条件</p>
 <ul>
@@ -134,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnltbph60001k9kuzhw0n694" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/23/信息熵/" data-id="cjnlu6nb0000112kujbqqgw01" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,6 +144,8 @@
 
   
 </article>
+
+
 
 </section>
         
@@ -183,7 +176,7 @@
       <ul>
         
           <li>
-            <a href="/2018/10/19/信息熵/">信息熵</a>
+            <a href="/2018/10/23/信息熵/">(no title)</a>
           </li>
         
           <li>
@@ -230,7 +223,7 @@
 
   </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config("");
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
 
 <script type="text/x-mathjax-config">
@@ -242,7 +235,7 @@
   });
 </script>
 
-<script type="text/javascript" src="">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
