@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large h%28x%29=-log_{2}p%28x%29">
 <meta property="og:image" content="https://pic2.zhimg.com/80/v2-5366c37ae1f87ca30e0d58a3bd76e4f5_hd.jpg">
 <meta property="og:image" content="http://chart.googleapis.com/chart?cht=tx&chl=\Large H%28x%29 = \sum_{x}p%28x%29h%28x%29=-\sum_{x}p%28x%29log_2p%28x%29">
-<meta property="og:updated_time" content="2018-10-25T00:17:02.331Z">
+<meta property="og:updated_time" content="2018-10-25T00:18:06.306Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="信息熵">
 <meta name="twitter:description" content="前言最近组内小伙伴峰哥分享了熵在机器学习中的应用，所以写下这篇blog，记录一下，在此再次感谢蜂哥。 熵在物理学中的应用熵最初来自于热力学，用来表示能量在空间分布的混乱程度，简而言之熵越大，系统越混乱，越难预测。当一个系统的能量达到完全平均分布时，这个系统的熵达到最大。 自信息量自信息是熵的基础，它表示某一事件发生时所带来的信息量的多少，当该事件发生的概率越大，其自信息越小。比如太阳从东方升起，该">
@@ -134,13 +134,41 @@
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<script type="math/tex; mode=display">H(x)=-(\frac{1}{2}\times\log_{2}(\frac{1}{2})+\frac{1}{4}\times\log_{2}(\frac{1}{4})+\frac{1}{8}\times\log_{2}(\frac{1}{8})+\frac{1}{8}\times\log_{2}(\frac{1}{8})</script><p>H(x)=1.75,表示上例中随机事件X平均需要1.75个bit来编码。通过信息熵可以确定随机变量X的最优编码的平均编码长度，但无法生成最终的编码形式。想要得到最优的编码结果需要借助霍夫曼编码（Huffman Coding）。在这里通过霍夫曼编码可以得到:<br>| 事件(X)  | 编码      |<br>| :———- | ————: |<br>| A        | 0         |<br>| B        | 10        |<br>| C        | 110       |<br>| D        | 111       |</p>
+<script type="math/tex; mode=display">H(x)=-(\frac{1}{2}\times\log_{2}(\frac{1}{2})+\frac{1}{4}\times\log_{2}(\frac{1}{4})+\frac{1}{8}\times\log_{2}(\frac{1}{8})+\frac{1}{8}\times\log_{2}(\frac{1}{8})</script><p>H(x)=1.75,表示上例中随机事件X平均需要1.75个bit来编码。通过信息熵可以确定随机变量X的最优编码的平均编码长度，但无法生成最终的编码形式。想要得到最优的编码结果需要借助霍夫曼编码（Huffman Coding）。在这里通过霍夫曼编码可以得到:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">事件(X)</th>
+<th style="text-align:right">编码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:right">0</td>
+</tr>
+<tr>
+<td style="text-align:left">B</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:right">110</td>
+</tr>
+<tr>
+<td style="text-align:left">D</td>
+<td style="text-align:right">111</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>假设随机变量<em>X</em>实验8次得到8次结果，A事件发生4次，B事件发生2次，C事件发生1次，D事件发生1次，总共编码长度为 $ 1\times4+2\times2+3\times1+3\times1=14 $</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnnu9os60001hbkubhx9lsb3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnnua4l90001mtkunb2uwkw6" class="article-share-link">Share</a>
       
       
     </footer>
