@@ -159,11 +159,12 @@
 </div>
 <p>假设随机变量<em>X</em>实验8次得到8次结果，A事件发生4次，B事件发生2次，C事件发生1次，D事件发生1次，总共编码长度为 <script type="math/tex">1\times4+2\times2+3\times1+3\times1=14</script><br>平均每个事件编码长度为<script type="math/tex">\frac{14}{8}=1.75</script></p>
 <h2 id="交叉熵"><a href="#交叉熵" class="headerlink" title="交叉熵"></a>交叉熵</h2><p>现在关于样本集的两个概率分布<em>p</em>和<em>q</em>,其中<em>p</em>是样本的真实分布，<em>q</em>非真实分布。按照真实分布<em>p</em>来衡量识别一个样本的所需要的编码长度的期望（平均编码长度）为<script type="math/tex">H(p)=-\sum_{i}p(i)\times\log_{2}p(i)</script>。如果使用错误的<em>q</em>来表示真实分布<em>p</em>的平均编码长度，则应该是：<script type="math/tex">H(p,q)=-\sum_{i}p(i)\times\log_{2}q(i)</script>。因为用<em>q</em>来编码的样本来自分布<em>p</em>，所以期望<em>H</em>(<em>p</em>,<em>q</em>)中用的概率是<em>p</em>(i)。<br>在逻辑回归中的Sigmoid和softmax函数中交叉熵作为损失函数使用。其中主要用于度量两个概率分布间的差异信息。<em>p</em>对<em>q</em>的交叉熵表示<em>q</em>分布的自信息对<em>p</em>分布的期望，公式定义为 ：<script type="math/tex">H(p,q)=-\sum_{x}p(x)\times\log_{2}q(x)</script><br>其中，<em>p</em>是真实或现实中样本的分布（通常都是未知的），<em>q</em>是预测得到的样本分布。在信息论中，交叉熵的计算数值表示：如果用错误的编码方式<em>q</em>去编码真实分布<em>p</em>的事件，需要多少bit位，是一种非常有用的衡量概率分布相似性的数学工具。由于交叉熵在逻辑回归中应用广泛，其定义为：</p>
-<script type="math/tex; mode=display">J(\theta)=-\frac{1}{m}\sum_{i}^{m}(y_{i}\log_{2}h_{\theta}(x_{i})+(1-y_{i})\log_{2}(1-h_{\theta}(x_{i})))</script>
+<script type="math/tex; mode=display">J(\theta)=-\frac{1}{m}\sum_{i}^{m}(y_{i}\log_{2}h_{\theta}(x_{i})+(1-y_{i})\log_{2}(1-h_{\theta}(x_{i})))</script><p>其中<script type="math/tex">y_{i}</script>是第<em>i</em>个样本的真实标签，<em>h</em>是sigmoid预测输出值。比如真实的分布是该样本属于正类，即<script type="math/tex">y_{i}</script>为1,模型预测出来的数据正类的概率<script type="math/tex">h_{\theta}(x_{i})</script>为0.8，则损失为<script type="math/tex">1\times\log_{2}(0.8)</script></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnoqul6g000161kuwi1jgxg0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjnpbjs6i0001alkudujc2wll" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +209,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjnoqul66000061ku211gb09x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjnpbjs630000alku8vr58mj3" class="article-share-link">Share</a>
       
       
     </footer>
