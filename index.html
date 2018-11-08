@@ -104,12 +104,12 @@
 </ul>
 <h2 id="AdaBoost算法的训练误差分析"><a href="#AdaBoost算法的训练误差分析" class="headerlink" title="AdaBoost算法的训练误差分析"></a>AdaBoost算法的训练误差分析</h2><p>AdaBoost最基本的性质是它能在学习过程中不断减少训练误差，即在训练数据集上的分类误差，关于这个问题有下面的定理：</p>
 <h3 id="定理1-AdaBoost算法最终分类器的训练误差上界为"><a href="#定理1-AdaBoost算法最终分类器的训练误差上界为" class="headerlink" title="定理1 AdaBoost算法最终分类器的训练误差上界为"></a>定理1 AdaBoost算法最终分类器的训练误差上界为</h3><script type="math/tex; mode=display">\frac {1}{N}\sum _{i=1}^{N}I(G(x_{i})\neq y_{i})\leq \frac {1}{N} \sum _{i}exp(-y_{i}f(x_{i}))=\prod _{m}Z_{m}</script><p>这里G(x), f(x)和<script type="math/tex">Z_{m}</script>有上面的式子可以得到。<br>    证明： 当<script type="math/tex">G(x_{i}) \neq y_{i}</script>时，<script type="math/tex">y_{i}f(x_{i}) < 0</script>,因此<script type="math/tex">exp(-y_{i}f(x_{i})) \geqslant 1</script>由此可以直接证明前半部分。<br>    后半部分的推导要用到<script type="math/tex">Z_{m}</script>的定义式以及更新<script type="math/tex">w_{m+1,i}</script>变形式</p>
-<script type="math/tex; mode=display">w_{m,i}exp(-\alpha_{m}y_{i}G_{m}(x_{i}))=Z_{m}w_{m+1,i}</script><p>推导如下:<br>\begin{align}<br>\frac{1}{N}\sum _{i}exp(-y_{i}f(x_{i}))\\\\<br>=\frac {1}{N}\sum _{i}(exp(-\sum _{m=1}^{M} \alpha_{m}y_{i}G_{m}(x_{i})))\\\\<br>=\sum _{i} w_{1i} \prod _{m=1}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} w_{1i} exp(-\alpha _{1} y_{i} G_{1}(x_{i})) \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} Z_{1} w_{2,i} \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))<br>\end{align}</p>
+<script type="math/tex; mode=display">w_{m,i}exp(-\alpha_{m}y_{i}G_{m}(x_{i}))=Z_{m}w_{m+1,i}</script><p>推导如下:<br>\begin{align}<br>\frac{1}{N}\sum _{i}exp(-y_{i}f(x_{i}))\\\\<br>=\frac {1}{N}\sum _{i}(exp(-\sum _{m=1}^{M} \alpha_{m}y_{i}G_{m}(x_{i})))\\\\<br>=\sum _{i} w_{1i} \prod _{m=1}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} w_{1i} exp(-\alpha _{1} y_{i} G_{1}(x_{i})) \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} Z_{1} w_{2i} \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=Z_{1} \sum _{i} w_{2i} exp(-\alhpa _{2} y_{i} G_{2}(x_{i})) \prod _{m=3}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))<br>\end{align}</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo98dzcx0000o9kuvftz7k7j" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo98hg9q0000cpkunudivwih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo98dzda0002o9kulr8qb7vb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo98hga60002cpkusf6o2iw0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -268,7 +268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo98dzd60001o9ku35ffp2c3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo98hga10001cpkuuqggx3xd" class="article-share-link">Share</a>
       
       
     </footer>
