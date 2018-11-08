@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T14:38:45.824Z">
+<meta property="og:updated_time" content="2018-11-08T14:52:00.725Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -104,11 +104,13 @@
 </li>
 <li>(3)构建基本分类器的线性组合<script type="math/tex; mode=display">f(x) = \sum _{m=1}^{M} \alpha_{m}G_{m}(x)</script>得到最终的分类器<script type="math/tex; mode=display">G(x)=sign(f(x))=sign( \sum _{m=1}^{M} \alpha_{m}G_{m}(x))</script></li>
 </ul>
+<h2 id="AdaBoost算法的训练误差分析"><a href="#AdaBoost算法的训练误差分析" class="headerlink" title="AdaBoost算法的训练误差分析"></a>AdaBoost算法的训练误差分析</h2><p>AdaBoost最基本的性质是它能在学习过程中不断减少训练误差，即在训练数据集上的分类误差，关于这个问题有下面的定理：</p>
+<h3 id="定理1-AdaBoost算法最终分类器的训练误差上界为"><a href="#定理1-AdaBoost算法最终分类器的训练误差上界为" class="headerlink" title="定理1 AdaBoost算法最终分类器的训练误差上界为"></a>定理1 AdaBoost算法最终分类器的训练误差上界为</h3><script type="math/tex; mode=display">\frac {1}{N}\sum _{i=1}^{N}I(G(x_{i})\neq y_{i})\leq \frac {1}{N} \sum _{i}exp(-y_{i}f(x_{i}))=\prod _{m}Z_{m}</script><p>这里G(x), f(x)和<script type="math/tex">Z_{m}</script>有上面的式子可以得到。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8p76wh000022ku30fvapuy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8pnvtm0000ehkukmwbfn8n" class="article-share-link">Share</a>
       
       
     </footer>
