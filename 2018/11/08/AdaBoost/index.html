@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T14:20:08.153Z">
+<meta property="og:updated_time" content="2018-11-08T14:32:43.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -98,7 +98,8 @@
 <li>(2)对m=1,2,…M(m代表迭代次数，或弱分类器的个数)<ul>
 <li>(a)使用具有权值分布<script type="math/tex">D_{m}</script>的训练数据集学习，得到基本分类器<script type="math/tex; mode=display">G_{m}(x): \chi\rightarrow \left \{ -1,+1 \right \}</script></li>
 <li>(b)计算<script type="math/tex">G_{m}(x)</script>在训练数据集上的分类误差率<script type="math/tex; mode=display">e_{m} = \sum _{i=1}^{N} P(G_{m}(x_{i})\neq y_{i})=\sum _{i=1}^{N}w_{mi}I(G_{m}(x_{i})\neq y_{i})</script></li>
-<li>(c)计算<script type="math/tex">G_{m}(x)</script>的系数<script type="math/tex; mode=display">\alpha _{m} = \frac{1}{2}\log \frac {1-e_{m}}{e_{m}}</script></li>
+<li>(c)计算<script type="math/tex">G_{m}(x)</script>的系数<script type="math/tex; mode=display">\alpha _{m} = \frac{1}{2}\log \frac {1-e_{m}}{e_{m}}</script>这里的对数是自然对数</li>
+<li>(d)更新训练数据集的权值分布<script type="math/tex; mode=display">D_{m+1} = (w_{m+1,1},...,w_{m+1,i},...w_{m+1,N})</script><script type="math/tex; mode=display">w_{m+1,i} = \frac {w_{mi}}{Z_{m}}exp(-\alpha_{m}y_{i}G_{m}(x_{i}))</script>这里，<script type="math/tex">Z_{m}</script>是规范化因子<script type="math/tex; mode=display">Z_{m} = \sum _{i=1}^{N} w_{mi}exp(-\alpha _{m} y_{i} G_{m}x_{i})</script>它使<script type="math/tex">D_{m+1}</script>成为一个概率分布，<script type="math/tex">\sum _{i}^{N} w_{m+1,i}=1</script></li>
 </ul>
 </li>
 </ul>
@@ -106,7 +107,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8ojl1i0000f0kugcii2tvg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8oz30i0000qgkuhr8glpvo" class="article-share-link">Share</a>
       
       
     </footer>
