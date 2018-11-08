@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T14:32:43.819Z">
+<meta property="og:updated_time" content="2018-11-08T14:38:45.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -102,12 +102,13 @@
 <li>(d)更新训练数据集的权值分布<script type="math/tex; mode=display">D_{m+1} = (w_{m+1,1},...,w_{m+1,i},...w_{m+1,N})</script><script type="math/tex; mode=display">w_{m+1,i} = \frac {w_{mi}}{Z_{m}}exp(-\alpha_{m}y_{i}G_{m}(x_{i}))</script>这里，<script type="math/tex">Z_{m}</script>是规范化因子<script type="math/tex; mode=display">Z_{m} = \sum _{i=1}^{N} w_{mi}exp(-\alpha _{m} y_{i} G_{m}x_{i})</script>它使<script type="math/tex">D_{m+1}</script>成为一个概率分布，<script type="math/tex">\sum _{i}^{N} w_{m+1,i}=1</script></li>
 </ul>
 </li>
+<li>(3)构建基本分类器的线性组合<script type="math/tex; mode=display">f(x) = \sum _{m=1}^{M} \alpha_{m}G_{m}(x)</script>得到最终的分类器<script type="math/tex; mode=display">G(x)=sign(f(x))=sign( \sum _{m=1}^{M} \alpha_{m}G_{m}(x))</script></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8ozfxq0000vbkuq090n38o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8p6u1m0000y4kucq5ofq6r" class="article-share-link">Share</a>
       
       
     </footer>
