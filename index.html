@@ -92,13 +92,19 @@
 <script type="math/tex; mode=display">T=\left \{ (x_{1}, y_{1}), (x_{2}, y_{2}), ...,(x_{N}, y_{N}) \right \}</script><p>其中,每个样本点由实例与标记组成.实例<script type="math/tex">x_{i}\in \chi \subseteq R^n</script>,标记<script type="math/tex">y_{i}\in \gamma =\left \{ -1, 1 \right \}</script>, <script type="math/tex">\chi</script>是实例空间,<script type="math/tex">\gamma</script>是标记集合.AdaBoost利用一下算法，从训练数据中学习一系列弱分类器或基本分类器，并将这些弱分类器<em>线性</em>组合成为一个强分类器。</p>
 <h3 id="算法1-AdaBoost"><a href="#算法1-AdaBoost" class="headerlink" title="算法1(AdaBoost)"></a>算法1(AdaBoost)</h3><p>输入：训练数据集<script type="math/tex">T=\left \{ (x_{1}, y_{1}), (x_{2}, y_{2}), ...,(x_{N}, y_{N}) \right \}</script>,其中<script type="math/tex">x_{i}\in \chi \subseteq R^n</script>，<script type="math/tex">\gamma \in \left \{ -1, +1 \right \}</script>;弱学习算法：<br>输出：最终分类器G(x)。</p>
 <ul>
-<li>初始化训练数据的权值分布 <script type="math/tex; mode=display">D_{1} = (w_{11},...,w_{1i},...,w{iN}), w_{1i}=\frac{1}{N}, i=1,2,...,N</script></li>
+<li>(1)初始化训练数据的权值分布 <script type="math/tex; mode=display">D_{1} = (w_{11},...,w_{1i},...,w{iN}), w_{1i}=\frac{1}{N}, i=1,2,...,N</script></li>
+<li>(2)对m=1,2,…M(m代表迭代次数，或弱分类器的个数)<ul>
+<li>(a)使用具有权值分布<script type="math/tex">D_{m}</script>的训练数据集学习，得到基本分类器<script type="math/tex; mode=display">G_{m}(x): \chi\rightarrow \left \{ -1,+1 \right \}</script></li>
+<li>(b)计算<script type="math/tex">G_{m}(x)</script>在训练数据集上的分类误差率<script type="math/tex; mode=display">e_{m} = \sum _{i=1}^{N} P(G_{m}(x_{i})\neq y_{i})=\sum _{i=1}^{N}w_{mi}I(G_{m}(x_{i})\neq y_{i})</script></li>
+<li>(c)计算<script type="math/tex">G_{m}(x)</script>的系数<script type="math/tex; mode=display">\alpha _{m} = \frac{1}{2}\log \frac {1-e_{m}}{e_{m}}</script></li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8o3asm0000tekupuekp3yc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8oj1pp000082kuf9j7uib0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo8o3asy0002tekui1k2e0g3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo8oj1q5000282kupggova2c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -257,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo8o3asu0001tekulqjak0h7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo8oj1q0000182ku4822ojou" class="article-share-link">Share</a>
       
       
     </footer>

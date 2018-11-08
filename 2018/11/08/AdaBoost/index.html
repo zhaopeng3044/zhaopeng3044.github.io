@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-08T14:07:42.315Z">
+<meta property="og:updated_time" content="2018-11-08T14:20:08.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -94,13 +94,19 @@
 <script type="math/tex; mode=display">T=\left \{ (x_{1}, y_{1}), (x_{2}, y_{2}), ...,(x_{N}, y_{N}) \right \}</script><p>其中,每个样本点由实例与标记组成.实例<script type="math/tex">x_{i}\in \chi \subseteq R^n</script>,标记<script type="math/tex">y_{i}\in \gamma =\left \{ -1, 1 \right \}</script>, <script type="math/tex">\chi</script>是实例空间,<script type="math/tex">\gamma</script>是标记集合.AdaBoost利用一下算法，从训练数据中学习一系列弱分类器或基本分类器，并将这些弱分类器<em>线性</em>组合成为一个强分类器。</p>
 <h3 id="算法1-AdaBoost"><a href="#算法1-AdaBoost" class="headerlink" title="算法1(AdaBoost)"></a>算法1(AdaBoost)</h3><p>输入：训练数据集<script type="math/tex">T=\left \{ (x_{1}, y_{1}), (x_{2}, y_{2}), ...,(x_{N}, y_{N}) \right \}</script>,其中<script type="math/tex">x_{i}\in \chi \subseteq R^n</script>，<script type="math/tex">\gamma \in \left \{ -1, +1 \right \}</script>;弱学习算法：<br>输出：最终分类器G(x)。</p>
 <ul>
-<li>初始化训练数据的权值分布 <script type="math/tex; mode=display">D_{1} = (w_{11},...,w_{1i},...,w{iN}), w_{1i}=\frac{1}{N}, i=1,2,...,N</script></li>
+<li>(1)初始化训练数据的权值分布 <script type="math/tex; mode=display">D_{1} = (w_{11},...,w_{1i},...,w{iN}), w_{1i}=\frac{1}{N}, i=1,2,...,N</script></li>
+<li>(2)对m=1,2,…M(m代表迭代次数，或弱分类器的个数)<ul>
+<li>(a)使用具有权值分布<script type="math/tex">D_{m}</script>的训练数据集学习，得到基本分类器<script type="math/tex; mode=display">G_{m}(x): \chi\rightarrow \left \{ -1,+1 \right \}</script></li>
+<li>(b)计算<script type="math/tex">G_{m}(x)</script>在训练数据集上的分类误差率<script type="math/tex; mode=display">e_{m} = \sum _{i=1}^{N} P(G_{m}(x_{i})\neq y_{i})=\sum _{i=1}^{N}w_{mi}I(G_{m}(x_{i})\neq y_{i})</script></li>
+<li>(c)计算<script type="math/tex">G_{m}(x)</script>的系数<script type="math/tex; mode=display">\alpha _{m} = \frac{1}{2}\log \frac {1-e_{m}}{e_{m}}</script></li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8o3asm0000tekupuekp3yc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo8oj1pp000082kuf9j7uib0" class="article-share-link">Share</a>
       
       
     </footer>
