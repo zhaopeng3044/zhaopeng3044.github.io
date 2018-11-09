@@ -105,11 +105,12 @@
 <h2 id="AdaBoost算法的训练误差分析"><a href="#AdaBoost算法的训练误差分析" class="headerlink" title="AdaBoost算法的训练误差分析"></a>AdaBoost算法的训练误差分析</h2><p>AdaBoost最基本的性质是它能在学习过程中不断减少训练误差，即在训练数据集上的分类误差，关于这个问题有下面的定理：</p>
 <h3 id="定理1-AdaBoost算法最终分类器的训练误差上界为"><a href="#定理1-AdaBoost算法最终分类器的训练误差上界为" class="headerlink" title="定理1 AdaBoost算法最终分类器的训练误差上界为"></a>定理1 AdaBoost算法最终分类器的训练误差上界为</h3><script type="math/tex; mode=display">\frac {1}{N}\sum _{i=1}^{N}I(G(x_{i})\neq y_{i})\leq \frac {1}{N} \sum _{i}exp(-y_{i}f(x_{i}))=\prod _{m}Z_{m}</script><p>这里G(x), f(x)和<script type="math/tex">Z_{m}</script>有上面的式子可以得到。<br>    证明： 当<script type="math/tex">G(x_{i}) \neq y_{i}</script>时，<script type="math/tex">y_{i}f(x_{i}) < 0</script>,因此<script type="math/tex">exp(-y_{i}f(x_{i})) \geqslant 1</script>由此可以直接证明前半部分。<br>    后半部分的推导要用到<script type="math/tex">Z_{m}</script>的定义式以及更新<script type="math/tex">w_{m+1,i}</script>变形式</p>
 <script type="math/tex; mode=display">w_{m,i}exp(-\alpha_{m}y_{i}G_{m}(x_{i}))=Z_{m}w_{m+1,i}</script><p>推导如下:<br>\begin{align}<br>\frac{1}{N}\sum _{i}exp(-y_{i}f(x_{i}))\\\\<br>=\frac {1}{N}\sum _{i}(exp(-\sum _{m=1}^{M} \alpha_{m}y_{i}G_{m}(x_{i})))\\\\<br>=\sum _{i} w_{1i} \prod _{m=1}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} w_{1i} exp(-\alpha _{1} y_{i} G_{1}(x_{i})) \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=\sum _{i} Z_{1} w_{2i} \prod _{m=2}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=Z_{1} \sum _{i} w_{2i} exp(-\alpha _{2} y_{i} G_{2}(x_{i})) \prod _{m=3}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=Z_{1} Z_{2} \sum _{i} w_{3i} exp(-\alpha _{3} y_{i} G_{3}(x_{i})) \prod _{m=4}^{M} exp(-\alpha_{m} y_{i} G_{m}(x_{i}))\\\\<br>=…\\\\<br>=Z_{1} Z_{2} … Z_{M} \sum _{i} w_{m+1,i}\\\\<br>=\prod _{m=1}^{M} Z_{m}\\\\<br>\end{align}<br>这一定理说明，可以在每一轮选取适当的<script type="math/tex">G_{m}</script>使得<script type="math/tex">Z_{m}</script>最小，从而使训练误差下降最快。</p>
-<h3 id="二分类问题AdaBoost的训练误差界"><a href="#二分类问题AdaBoost的训练误差界" class="headerlink" title="二分类问题AdaBoost的训练误差界"></a>二分类问题AdaBoost的训练误差界</h3><script type="math/tex; mode=display">\prod _{m=1}^{M} Z_{m}= \prod _{m=1}^{M}(2\sqrt {e_{m}(1-e_{m})})=\prod _{m=1}^{M} \sqrt {(1-4\gamma _{m}^{2})} \leq exp(-2\sum _{m=1}^{M} \gamma _{m}^{2})</script>
+<h3 id="二分类问题AdaBoost的训练误差界"><a href="#二分类问题AdaBoost的训练误差界" class="headerlink" title="二分类问题AdaBoost的训练误差界"></a>二分类问题AdaBoost的训练误差界</h3><script type="math/tex; mode=display">\prod _{m=1}^{M} Z_{m}= \prod _{m=1}^{M}(2\sqrt {e_{m}(1-e_{m})})=\prod _{m=1}^{M} \sqrt {(1-4\gamma _{m}^{2})} \leq exp(-2\sum _{m=1}^{M} \gamma _{m}^{2})</script><p>这里，<script type="math/tex">\gamma _{m}=\frac{1}{2}-e_{m}</script></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9cbbsx00005dkum00wemqq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9ce43s0000lwkuq94yml4c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -223,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo9cbbtc00025dku44lsmz77" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo9ce4490002lwkupvyw6p1j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -268,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo9cbbt700015dku709oj12u" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo9ce4440001lwkuf3p8rs9p" class="article-share-link">Share</a>
       
       
     </footer>
