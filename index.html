@@ -112,11 +112,11 @@
 <h3 id="前向分步算法"><a href="#前向分步算法" class="headerlink" title="前向分步算法"></a>前向分步算法</h3><p>考虑加法模型(additive model)</p>
 <script type="math/tex; mode=display">f(x)=\sum _{m=1}^{M} \beta _{m} b(x;\gamma_{m})</script><p>其中,<script type="math/tex">b(x;\gamma _{m})</script>为基函数,<script type="math/tex">\gamma _{m}</script>为基函数的系数.显然AdaBoost是一个加法模型<br>在给定训练数据集以及损失函数L(y,f(x))的条件下,学习加法模型f(x)成为经验风险极小化即损失函数极小化问题:</p>
 <script type="math/tex; mode=display">\underset{\beta _{m}, \gamma _{m}}{\text{min}} \sum _{m=1}^{N} L(y_{i}, \sum _{m=1}^{M} \beta_{m}b(x_{i};\gamma_{m}))</script><p>通常这是一个复杂的优化问题,前向分步算法(forward stagewise algorithm)求解这一优化问题的想法是:因为学习模型是加法模型,如果能够从前向后,每一步只学习一个基函数及其系数,逐步逼近优化目标函数,那么就可以简化优化的复杂度.具体,每步只需要优化如下损失函数:</p>
-<script type="math/tex; mode=display">\underset{\beta , \gamma } \sum _{i=1}^{N} L(y_{i}, \beta b(x_{i};\gamma))</script>
+<script type="math/tex; mode=display">\underset{\beta , \gamma }{\text{min}} \sum _{i=1}^{N} L(y_{i}, \beta b(x_{i};\gamma))</script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9iwuh20000pqku8lv1iaxz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9iyg0y00001jkuwbbbqdsm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo9iwuhi0002pqkuuu524g5h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/19/信息熵/" data-id="cjo9iyg1h00021jku5ebr9r5i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -275,7 +275,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo9iwuhd0001pqkuqqi7hhgb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/10/hello-world/" data-id="cjo9iyg1c00011jkuzab8e23y" class="article-share-link">Share</a>
       
       
     </footer>
