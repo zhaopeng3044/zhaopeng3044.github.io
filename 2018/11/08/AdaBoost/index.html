@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-09T04:10:10.574Z">
+<meta property="og:updated_time" content="2018-11-09T04:20:49.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -112,12 +112,12 @@
 <script type="math/tex; mode=display">\prod _{m=1}^{M} \sqrt{(1-4 \gamma_{m}^{2})} \leq exp(-2 \sum _{m=1}^{M} \gamma _{m}^{2})</script><p>则可先由<script type="math/tex">e^{x}</script>和<script type="math/tex">\sqrt{1-x}</script>在点x=0的泰勒展开式推出不等式<script type="math/tex">\sqrt{(1-4\gamma_{m}^{2})} \leq exp(-2 \gamma _{m}^{2})</script></p>
 <h2 id="AdaBoost算法的解释"><a href="#AdaBoost算法的解释" class="headerlink" title="AdaBoost算法的解释"></a>AdaBoost算法的解释</h2><p>AdaBoost算法还有另一个解释,即可以认为AdaBoost算法是模型为加法模型,损失函数为指数函数,学习算法为前向分步算法时的二分类学习方法.</p>
 <h3 id="前向分步算法"><a href="#前向分步算法" class="headerlink" title="前向分步算法"></a>前向分步算法</h3><p>考虑加法模型(additive model)</p>
-<script type="math/tex; mode=display">f(x)=\sum _{m=1}^{M} \beta _{m} b(x;\gamma_{m})</script><p>其中,<script type="math/tex">b(x;\gamma _{m})</script>为基函数,<script type="math/tex">\gamma _{m}</script>为基函数的系数.显然AdaBoost是一个加法模型</p>
-
+<script type="math/tex; mode=display">f(x)=\sum _{m=1}^{M} \beta _{m} b(x;\gamma_{m})</script><p>其中,<script type="math/tex">b(x;\gamma _{m})</script>为基函数,<script type="math/tex">\gamma _{m}</script>为基函数的系数.显然AdaBoost是一个加法模型<br>在给定训练数据集以及损失函数L(y,f(x))的条件下,学习加法模型f(x)成为经验风险极小化即损失函数极小化问题:</p>
+<script type="math/tex; mode=display">\underset{\beta _{m}, \gamma _{m}}{\text{min}} \sum _{m=1}^{N} L(y_{i}, \sum _{m=1}^{M} \beta_{m}b(x_{i};\gamma_{m}))</script>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9i6nen0000rykufx5e7wzk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9ik0fe0000mxkubb44znop" class="article-share-link">Share</a>
       
       
     </footer>
