@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-09T08:59:01.017Z">
+<meta property="og:updated_time" content="2018-11-10T03:33:04.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AdaBoost">
 <meta name="twitter:description" content="提升方法的基本思想提升方法(Boosting)基于这样一种思想:对于一个复杂的任务来说,将多个专家的判断进行适当的综合所得出的判断,要比其中任何一个专家单独的判断要好.实际上就是三个臭皮匠顶过一个诸葛亮.历史上,Kearns和 Valiant首先提出了”强可学习(Strong learnable)”和弱可学习(Weakly learnable)”的概念.指出:在概率近似正确(probably">
@@ -121,13 +121,13 @@
 <li>(b)更新<script type="math/tex; mode=display">f_{m}(x) = f_{m-1}(x) + \beta_{m}b(x; \gamma_{m})</script></li>
 </ul>
 </li>
-<li>(3)得到加法模型<script type="math/tex; mode=display">f(x)=f_{M}(x) = \sum _{m=1}{M} \beta _{m}b(x;\gamma_{m})</script>这样,前向分步算法同时求解从m=1到M的所有参数<script type="math/tex">\beta_{m}</script>, <script type="math/tex">\gamma_{m}</script>的优化问题简化为逐次求解各个<script type="math/tex">\beta _{m}</script>, <script type="math/tex">\gamma_{m}</script>的优化问题.<h3 id="向前分步算法与AdaBoost"><a href="#向前分步算法与AdaBoost" class="headerlink" title="向前分步算法与AdaBoost"></a>向前分步算法与AdaBoost</h3><a href="https://blog.csdn.net/v_JULY_v/article/details/40718799" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/40718799</a></li>
+<li>(3)得到加法模型<script type="math/tex; mode=display">f(x)=f_{M}(x) = \sum _{m=1}{M} \beta _{m}b(x;\gamma_{m})</script>这样,前向分步算法同时求解从m=1到M的所有参数<script type="math/tex">\beta_{m}</script>, <script type="math/tex">\gamma_{m}</script>的优化问题简化为逐次求解各个<script type="math/tex">\beta _{m}</script>, <script type="math/tex">\gamma_{m}</script>的优化问题.<h3 id="向前分步算法与AdaBoost"><a href="#向前分步算法与AdaBoost" class="headerlink" title="向前分步算法与AdaBoost"></a>向前分步算法与AdaBoost</h3><a href="https://blog.csdn.net/v_JULY_v/article/details/40718799" target="_blank" rel="noopener">https://blog.csdn.net/v_JULY_v/article/details/40718799</a><br>由前向分步算法可以推导出AdaBoost,用定理叙述这一关系.<br><strong>定理</strong>AdaBoost算法是前向分步算法的特列.这时,模型是由基本分类器组成的加法模型,损失函数是指数函数.<br><strong>证明</strong> 前向分步算法学习的是加法模型,当基函数为基本分类器时,该模型等价于AdaBoost的最终分类器<script type="math/tex; mode=display">f(x)=\sum _{m=1}^{M} \alpha _{m}G_{m}(x)</script></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjo9sig940002xwkuf2b0i9vo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/08/AdaBoost/" data-id="cjoawkxg10002vjkuj8liecgg" class="article-share-link">Share</a>
       
       
     </footer>
